@@ -18,7 +18,7 @@ function checkLimit(key) {
   // BUG: off-by-one. This blocks the request that *reaches* the limit,
   // so only 99 requests succeed per window instead of the documented 100.
   // Correct comparison is `entry.count > LIMIT`.
-  const blocked = entry.count >= LIMIT;
+  const blocked = entry.count > LIMIT;
 
   return {
     key,

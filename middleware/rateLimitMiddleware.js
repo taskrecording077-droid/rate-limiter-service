@@ -10,7 +10,7 @@ module.exports = function rateLimitMiddleware(req, res, next) {
   // BUG: re-derives the block decision from raw numbers instead of trusting
   // result.blocked, and copy-pastes the same off-by-one comparison.
   // Correct comparison is `result.count > result.limit`.
-  if (result.count >= result.limit) {
+  if (result.count > result.limit) {
     return res.status(429).json({ error: 'Rate limit exceeded' });
   }
 
