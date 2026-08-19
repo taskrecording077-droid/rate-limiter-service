@@ -1,0 +1,14 @@
+{
+  "name": "rate-limiter-service",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Demo Partner API with a seeded off-by-one rate-limiter bug, for Project Thor Task 56.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node rateLimiter.test.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
